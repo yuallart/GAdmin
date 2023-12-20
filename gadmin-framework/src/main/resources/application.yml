@@ -38,3 +38,15 @@ mybatis-plus:
 #    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
     # 返回类型为Map,显示null对应的字段
     call-setters-on-nulls: true
+
+
+# 设置忽略鉴权的地址
+mine-config:
+  check-login:
+    # 忽略以下接口，不鉴权，路径不包含 server.servlet.context-path，即不用考虑
+    exclude:
+      # swagger接口文档
+      - /swagger-ui.html
+      - /swagger-ui/**
+      - /api-docs
+      - /api-docs/**

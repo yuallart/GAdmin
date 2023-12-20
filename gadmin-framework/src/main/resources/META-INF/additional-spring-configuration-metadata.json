@@ -1,1 +1,9 @@
-{ "properties": [ ] }
+{
+  "properties": [
+    {
+      "name": "mine-config.check-login.exclude",
+      "type": "java.lang.String",
+      "description": "Description for mine-config.check-login.exclude."
+    }
+  ]
+}

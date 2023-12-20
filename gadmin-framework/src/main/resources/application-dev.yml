@@ -1,8 +1,8 @@
 # 测试环境
 server:
-  port: 8033
+  port: 4080
   servlet:
-    context-path: /my
+    context-path: /admin
 
 # springdoc配置
 springdoc:
@@ -14,15 +14,6 @@ springdoc:
   swagger-ui:
     # 持久化认证数据
     persistAuthorization: false
-
-# 防止XSS攻击
-xss:
-  # 过滤开关
-  enabled: true
-  # 排除链接（多个用逗号分隔）
-  excludes: /system/notice
-  # 匹配链接
-  urlPatterns: /system/*,/monitor/*,/tool/*
 
 spring:
   servlet:
@@ -46,20 +37,6 @@ spring:
         session-stat-enable: true
         session-stat-max-count: 100
       # 监控页面
-      stat-view-servlet:
-        # 是否启用
-        enabled: true
-        # 访问地址规则
-        url-pattern: /druid/*
-        # 是否允许清空统计数据
-        reset-enable: true
-        # 设置监控页面的登录名和密码
-        login-username: myadmin
-        login-password: myadmin
-        # 授权允许访问的IP列表，多个用,隔开 (没有配置或者为空，则允许所有访问)
-        # allow: 127.0.0.1
-        # 禁止访问的IP列表，(deny优先于allow)
-        # deny: 192.168.1.100
     dynamic:
       druid:
         # 初始化连接个数
@@ -164,16 +141,17 @@ sa-token:
   # token前缀
   token-prefix: "Bearer"
   # jwt秘钥
-  jwt-secret-key: 1qTJiBvZMaDloBOnRrngkzr5g7vuQyZA
+  jwt-secret-key: swqdjw23jw921nndsaxcwef
   # 关闭启动时logo和版本号打印
   is-print: false
 
 # 设置忽略鉴权的地址
-check-login:
-  # 忽略以下接口，不鉴权，路径不包含 server.servlet.context-path，即不用考虑
-  ignores:
-    # swagger接口文档
-    - /swagger-ui.html
-    - /swagger-ui/**
-    - /api-docs
-    - /api-docs/**
+mine-config:
+  check-login:
+    # 忽略以下接口，不鉴权，路径不包含 server.servlet.context-path，即不用考虑
+    exclude:
+      # swagger接口文档
+      - /swagger-ui.html
+      - /swagger-ui/**
+      - /api-docs
+      - /api-docs/**

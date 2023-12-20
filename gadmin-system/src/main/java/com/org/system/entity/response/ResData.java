@@ -4,19 +4,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.sql.Timestamp;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class ResData<T> {
     private String msg;
-    private Timestamp time;
+    private int code;
     private T data;
 
     public ResData(String msg, T data) {
+        this.code = 0;
         this.msg = msg;
-        this.time = DateUtil.currentTimestamp();
         this.data = data;
     }
 }

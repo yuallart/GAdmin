@@ -1,2 +1,5 @@
-package com.org.exception.function;public class ExceptionHandle {
+package com.org.exception.function;
+
+public interface ExceptionHandle {
+    void run();
 }
