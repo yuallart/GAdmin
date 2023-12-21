@@ -31,6 +31,7 @@ public class CaptchaInterceptor extends SaInterceptor{
             while ((inputStr = streamReader.readLine()) != null) {
                 builder.append(inputStr);
             }
+
         } catch (IOException e) {
             throw new IllegalArgumentException("解析json出错");
         }

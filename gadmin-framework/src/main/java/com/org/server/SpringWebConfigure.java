@@ -1,4 +1,4 @@
-package com.org.sotoken;
+package com.org.server;
 
 import com.org.sotoken.Interceptor.CaptchaInterceptor;
 import com.org.sotoken.Interceptor.CheckLoginInterceptor;
@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-public class SaTokenConfigure implements WebMvcConfigurer {
+public class SpringWebConfigure implements WebMvcConfigurer {
     @Resource
     private ExcludePath excludePath;
 

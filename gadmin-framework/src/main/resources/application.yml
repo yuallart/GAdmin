@@ -2,13 +2,13 @@ spring:
   profiles:
     active: dev
   application:
-    name: MyAdmin
+    name: GAdmin
 
 # 日志
 logging:
   level:
-    cn.daenx.myadmin: info
-    org.springframework: warn
+    com.org: info
+    org.springframework: info
   config: classpath:logback.xml
 
 
