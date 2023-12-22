@@ -1,0 +1,30 @@
+{
+  "name": "gadmin-zdoc",
+  "version": "0.1.0",
+  "description": "gadmin starting",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "yuallart",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@mdit-vue/shared": "^2.0.0",
+    "less": "^4.2.0",
+    "medium-zoom": "^1.1.0",
+    "sass": "^1.69.5",
+    "vitepress": "1.0.0-rc.32",
+    "vitepress-markdown-timeline": "^1.2.1",
+    "vitepress-plugin-comment-with-giscus": "^1.1.11",
+    "vue": "^3.3.13"
+  },
+  "scripts": {
+    "npm:init": "npm install",
+    "pnpm:init": "pnpm install",
+    "yarn:init": "yarn install",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  }
+}
